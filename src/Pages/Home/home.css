@@ -10,6 +10,7 @@
     padding: 16px 0px;
     border-bottom: 1px solid gray;
     justify-content: center;
+    flex-wrap: wrap;
 }
 
 .tab h4 {

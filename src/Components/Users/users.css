@@ -51,7 +51,7 @@ input[type="submit"] {
         margin-bottom: 16px;
     }
 
-    .user-details-form input {
+    .user-details-form input, input[type="submit"]  {
         margin-right: 0px;
     }
 }
