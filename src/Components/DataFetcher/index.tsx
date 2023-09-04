@@ -6,6 +6,7 @@ export const DataFetcher = () => {
     const [loading, setLoading] = useState(true)
     const [data, setData] = useState<any>()
     useEffect(() => {
+        
         let isCalled = false
         fetch("http://universities.hipolabs.com/search?country=United+States").then(res => res.json()).then((data) => {
             if (!isCalled) {
