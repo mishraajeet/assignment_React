@@ -10,8 +10,14 @@ export const TodoComponent = () => {
     const dispatch = useDispatch();
     const addTodo = (e: React.FormEvent) => {
         e.preventDefault()
-        dispatch(addNewTodo({ id: Date.now(), todoTitle }));
-        setTodoTitle('')
+        if (todoTitle) {
+            dispatch(addNewTodo({ todoTitle }));
+            setTodoTitle('')
+        }
+    }
+
+    const deleteHandle = (index: number) => {
+        dispatch(deleteTodo(index))
     }
     return (
         <div className="todo-container" onSubmit={addTodo}>
@@ -22,10 +28,10 @@ export const TodoComponent = () => {
 
             {todos.map((t: any, i: number) => {
                 return (
-                    <>
-                        <div key={i}>{t.todoTitle}</div>
-                        <button></button>
-                    </>
+                    <div key={i} className="todo-list">
+                        <div>{t.todoTitle}</div>
+                        <button className="delete" onClick={() => deleteHandle(i)}>Delete</button>
+                    </div>
                 )
             })}
         </div>

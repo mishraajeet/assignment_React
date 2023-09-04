@@ -1,5 +1,17 @@
 .todo-container {
     margin-top: 48px;
+    text-align: center;
+}
+
+form {
+    margin-bottom: 24px;
+}
+
+.todo-list {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 16px;
 }
 
 input[type="text"] {
@@ -17,6 +29,17 @@ input[type="submit"] {
     color: #000;
     cursor: pointer;
     margin-right: 24px;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+.delete {
+    background-color: #fdcedf;
+    outline: none;
+    border: transparent;
+    color: #000;
+    cursor: pointer;
+    margin-left: 24px;
     padding: 8px 12px;
     border-radius: 8px;
 }
