@@ -4,3 +4,21 @@
     margin: 0 auto;
     padding: 0 16px;
 }
+
+.tab {
+    display: flex;
+    padding: 16px 0px;
+    border-bottom: 1px solid gray;
+    justify-content: center;
+}
+
+.tab h4 {
+    margin-right: 16px;
+    padding: 8px 16px;
+    cursor: pointer;
+}
+
+.tab h4.active {
+    background-color: #d0bfff;
+    border-radius: 8px;
+}

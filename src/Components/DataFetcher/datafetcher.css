@@ -1,0 +1,56 @@
+.data-fetcher-container {
+    padding: 64px 0;
+}
+
+.country-details {
+    padding: 16px;
+    border-bottom: 1px solid #D6EAFF;
+    width: fit-content;
+}
+
+.loading-container {
+    text-align: center;
+}
+
+.loading {
+    width: 30px;
+    height: 30px;
+    border-radius: 100%;
+    display: inline-block;
+    margin-right: 16px;
+    animation: loadingAnimation 0.5s infinite;
+}
+
+.loading:nth-child(3n+1) {
+    background-color: #fff89a;
+}
+
+.loading:nth-child(3n+2) {
+    background-color: #beadfa;
+}
+
+.loading:nth-child(3n+3) {
+    background-color: #ccf6c8;
+}
+
+
+
+@keyframes loadingAnimation {
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.4);
+    }
+
+    100% {
+        transform: scale(1);
+    }
+}
+
+@media only screen and (max-width: 767px) {
+    .data-fetcher-container {
+        padding: 32px 0;
+    }
+}
