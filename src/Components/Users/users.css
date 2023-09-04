@@ -3,7 +3,7 @@
     justify-content: center;
     align-items: center;
     padding: 32px 0px;
-    border: 1px solid #6edeeb;
+    border: 1px solid #D6EAFF;
     border-radius: 16px;
     margin: 16px 0px
 }
@@ -21,9 +21,37 @@
 }
 
 input[type="submit"] {
-    background-color: #03fcdb;
+    background-color: #D6EAFF;
     outline: none;
     border: transparent;
     color: #000;
     cursor: pointer;
 }
+
+@media only screen and (max-width: 1023px) {
+
+    .user-details-form  {
+        flex-wrap: wrap;
+    }
+
+    .user-details-input, input[type="submit"] {
+        width: 50%;
+        margin-bottom: 16px;
+    }
+}
+
+
+@media only screen and (max-width: 767px) {
+    .user-details-form  {
+        flex-direction: column;
+    }
+
+    .user-details-input {
+        margin-bottom: 16px;
+    }
+
+    .user-details-form input {
+        margin-right: 0px;
+    }
+}
+
