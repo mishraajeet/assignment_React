@@ -5,6 +5,7 @@ import { Navbar } from './Components/Navbar';
 import { HomePage } from "./Pages/Home";
 import { AboutPage } from "./Pages/About";
 
+
 function App() {
   return (
     <>
