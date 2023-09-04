@@ -1,0 +1,28 @@
+.todo-container {
+    margin-top: 48px;
+}
+
+input[type="text"] {
+    margin-right: 24px;
+    padding: 8px 12px;
+    border-radius: 8px;
+    outline: 0;
+    border: 1px solid #404040;
+}
+
+input[type="submit"] {
+    background-color: #D6EAFF;
+    outline: none;
+    border: transparent;
+    color: #000;
+    cursor: pointer;
+    margin-right: 24px;
+    padding: 8px 12px;
+    border-radius: 8px;
+}
+
+@media only screen and (max-width: 767px) {
+    .todo-container {
+        margin-top: 32px;
+    }
+}

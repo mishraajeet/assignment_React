@@ -3,9 +3,10 @@ import { Link } from "react-router-dom";
 import { Users } from "../../Components/Users";
 import { Counter } from "../../Components/Counter";
 import { DataFetcher } from "../../Components/DataFetcher";
+import { TodoComponent } from "../../Components/Todo"
 import "./home.css";
 
-const tabsTitle = ['Users', 'Counter', 'DataFetcher']
+const tabsTitle = ['Users', 'Counter', 'DataFetcher', 'Todo']
 
 export const HomePage = () => {
     const [activeTab, setActiveTab] = useState('Users')
@@ -27,7 +28,7 @@ export const HomePage = () => {
                     })
                 }
             </div>
-            {activeTab === 'Users' ? <Users /> : activeTab === 'Counter' ? <Counter /> : <DataFetcher />}
+            {activeTab === 'Users' ? <Users /> : activeTab === 'Counter' ? <Counter /> : activeTab === 'DataFetcher' ? <DataFetcher /> : <TodoComponent />}
         </div>
     )
 }

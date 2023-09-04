@@ -1,6 +1,6 @@
 import { legacy_createStore as createStore } from "redux";
 
-export const addNewTodo = (todo: { id: string, todoTitle: string }) => {
+export const addNewTodo = (todo: { id: number, todoTitle: string }) => {
     return {
         type: 'ADD_TODO',
         payload: {
@@ -10,7 +10,7 @@ export const addNewTodo = (todo: { id: string, todoTitle: string }) => {
     };
 };
 
-export const deleteTodo = (id: string) => {
+export const deleteTodo = (id: number) => {
     return {
         type: 'DELETE_TODO',
         id,
@@ -36,6 +36,5 @@ const todoReducer = (state = initialState, action: { type: string, payload: { id
     }
 }
 
-const store = createStore(
-    todoReducer)
+const store = createStore(todoReducer)
 export default store
