@@ -1,0 +1,30 @@
+.nav-container {
+    width: 100%;   
+    box-shadow: 0px 1px 10px #999;
+}
+
+.nav-container header {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 16px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.title a {
+    font-size: 24px; 
+}
+
+nav {
+    display: flex;    
+}
+
+nav li {
+    list-style-type: none;
+    margin-left: 16px;
+}
+
+nav li a {
+    font-weight: bold;
+}
