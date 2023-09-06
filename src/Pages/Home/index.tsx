@@ -6,7 +6,7 @@ import { DataFetcher } from "../../Components/DataFetcher";
 import { TodoComponent } from "../../Components/Todo"
 import "./home.css";
 
-const tabsTitle = ['Users', 'Counter', 'DataFetcher', 'Todo']
+const tabs = ['Users', 'Counter', 'Fetch Data', 'Todo']
 
 export const HomePage = () => {
     const [activeTab, setActiveTab] = useState('Users')
@@ -20,15 +20,15 @@ export const HomePage = () => {
         <div className="home-page-container">
             <div className="tab">
                 {
-                    tabsTitle.map((title: string, i: number) => {
+                    tabs.map((item: string, i: number) => {
                         return (
-                            <h4 onClick={() => handleTab(title, i)} key={i} className={activeTabIndex === i ? 'active' : ''}>{title}</h4>
+                            <h4 onClick={() => handleTab(item, i)} key={i} className={activeTabIndex === i ? 'active' : ''}>{item}</h4>
 
                         )
                     })
                 }
             </div>
-            {activeTab === 'Users' ? <Users /> : activeTab === 'Counter' ? <Counter /> : activeTab === 'DataFetcher' ? <DataFetcher /> : <TodoComponent />}
+            {activeTab === 'Users' ? <Users /> : activeTab === 'Counter' ? <Counter /> : activeTab === 'Fetch Data' ? <DataFetcher /> : <TodoComponent />}
         </div>
     )
 }

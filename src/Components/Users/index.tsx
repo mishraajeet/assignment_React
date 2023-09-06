@@ -4,12 +4,12 @@ import { UserProfile, UserProfileProps } from "../UserProfile";
 
 export const Users = () => {
     const [usersList, setUsersList] = useState<any>([
-        { name: 'Test', email: 'test@gmail.com', avatarUrl: 'https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png' }
+        { name: 'Ajeet', email: 'ajeet@gmail.com', url: 'https://e7.pngegg.com/pngimages/799/987/png-clipart-computer-icons-avatar-icon-design-avatar-heroes-computer-wallpaper-thumbnail.png' }
     ])
     const [userDetails, setUserDetails] = useState({
         name: "",
         email: "",
-        avatarUrl: "",
+        url: "",
     })
 
     const getUserInfo = (event: React.ChangeEvent<HTMLInputElement>) => {
@@ -24,7 +24,7 @@ export const Users = () => {
         setUserDetails({
             name: "",
             email: "",
-            avatarUrl: "",
+            url: "",
         })
     }
 
@@ -41,14 +41,14 @@ export const Users = () => {
                     <input value={userDetails.email} id="email" type="text" name="email" onChange={getUserInfo} />
                 </div>
                 <div className="user-details-input">
-                    <label htmlFor="avatarUrl">Avatar</label>
-                    <input value={userDetails.avatarUrl} id="avatarUrl" type="text" name="avatarUrl" onChange={getUserInfo} />
+                    <label htmlFor="url">Image Url</label>
+                    <input value={userDetails.url} id="url" type="text" name="url" onChange={getUserInfo} />
                 </div>
                 <input type="submit" value="Submit" />
             </form>
             {usersList && usersList.map((user: UserProfileProps, i: number) => {
                 return (
-                    <UserProfile name={user.name} email={user.email} avatarUrl={user.avatarUrl} key={i} />
+                    <UserProfile name={user.name} email={user.email} url={user.url} key={i} />
                 )
             })}
 

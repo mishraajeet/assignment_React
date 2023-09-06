@@ -8,7 +8,7 @@ export const DataFetcher = () => {
     useEffect(() => {
         
         let isCalled = false
-        fetch("http://universities.hipolabs.com/search?country=United+States").then(res => res.json()).then((data) => {
+        fetch("https://resporent.free.beeceptor.com/todos").then(res => res.json()).then((data) => {
             if (!isCalled) {
                 let newData = data
                 setData(newData.slice(0, 30))
@@ -38,8 +38,7 @@ export const DataFetcher = () => {
                     return (
                         <div key={i} className="country-details">
                             <div>
-                                <h3>{d.name} - {d.country}</h3>
-                                <a href={d.web_pages} target="_blank">{d.web_pages}</a>
+                                <h3>{d.title}</h3>
                             </div>
                         </div>
                     )

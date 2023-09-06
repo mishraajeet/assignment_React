@@ -3,14 +3,14 @@ import "./userprofile.css"
 export type UserProfileProps = {
     name: string,
     email: string,
-    avatarUrl: string
+    url: string
 }
 
-export const UserProfile = ({ name, email, avatarUrl }: UserProfileProps) => {
+export const UserProfile = ({ name, email, url }: UserProfileProps) => {
     return (
         <div className="user-profile-container">
             <div className="user-avatar">
-                <img src={avatarUrl} alt={`${name} image`} />
+                <img src={url} alt={`${name} image`} />
             </div>
             <div>
                 <h5>{name}</h5>
